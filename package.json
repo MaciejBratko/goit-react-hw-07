@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.8",
+    "axios": "^1.7.7",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "goit-react-hw-01": "file:",

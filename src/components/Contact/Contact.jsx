@@ -1,19 +1,18 @@
 import css from "./Contact.module.css";
 
-const Contact = ({ data: { id, name, number }, onDelete }) => {
+const Contact = ({ data: { id, name, phone }, onDelete, isDeleting }) => {
   return (
     <div className={css.container}>
       <div>
         <p>{name}</p>
-        <p>{number}</p>
+        <p>{phone}</p>
       </div>
       <button
         className={css.deleteButton}
-        onClick={() => {
-          onDelete(id);
-        }}
+        onClick={() => onDelete(id)}
+        disabled={isDeleting}
       >
-        Delete
+        {isDeleting ? "Deleting..." : "Delete"}
       </button>
     </div>
   );
